@@ -1,0 +1,60 @@
+{
+  "name": "rootsave-bitcoin-savings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hardhat.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+"scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "test:coverage": "npx hardhat coverage",
+    
+    "deploy:local": "npx hardhat run scripts/deploy-rootsave.js --network localhost",
+    "deploy:testnet": "npx hardhat run scripts/deploy-rootsave.js --network rootstock",
+    "deploy:mainnet": "npx hardhat run scripts/deploy-rootsave.js --network rootstock-mainnet",
+    
+    "verify:testnet": "npx hardhat verify --network rootstock",
+    "verify:mainnet": "npx hardhat verify --network rootstock-mainnet",
+    "verify:deployment:testnet": "npx hardhat run scripts/verify-deployment.js --network rootstock",
+    "verify:deployment:mainnet": "npx hardhat run scripts/verify-deployment.js --network rootstock-mainnet",
+    
+    "node": "npx hardhat node",
+    "console:testnet": "npx hardhat console --network rootstock",
+    "console:mainnet": "npx hardhat console --network rootstock-mainnet",
+    
+    "flatten": "npx hardhat flatten contracts/RootsaveBitcoinSavings.sol > flattened/RootsaveBitcoinSavings-flattened.sol",
+    "clean": "npx hardhat clean",
+    
+    "fund:testnet": "npx hardhat run scripts/fund-contract.js --network rootstock",
+    "fund:mainnet": "npx hardhat run scripts/fund-contract.js --network rootstock-mainnet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.9",
+    "@nomicfoundation/hardhat-ethers": "^3.0.9",
+    "@nomicfoundation/hardhat-ignition": "^0.15.11",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.12",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.14",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "chai": "^4.5.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.14.4",
+    "hardhat": "^2.24.3",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.8.16",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.8.3"
+  }
+}
