@@ -2,7 +2,7 @@
 
 > **Complete Architecture Guide** for developing Bitcoin-backed DeFi applications on Rootstock
 
-![Rootsave Banner](./assets/screenshots/rootsave-banner.png)
+![Rootsave Banner](./mobile/assets/icon.png)
 
 ## 🏗️ What You'll Learn
 
